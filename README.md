@@ -14,7 +14,9 @@ BlinkLEDs
   - 6 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
   - 1 x Tactile Push button
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
-
+- For circuit and connectivity details please refer to the images in the respective directories
+- For additional reading please visit 
+  - https://www.raspberrypi.org/learning/physical-computing-with-python/worksheet/
 
 Sense_Temp_Humidity
 - Components required for the programs in this folder include
