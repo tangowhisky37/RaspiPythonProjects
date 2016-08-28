@@ -18,7 +18,7 @@ BlinkLEDs
 - For additional reading please visit 
   - https://www.raspberrypi.org/learning/physical-computing-with-python/worksheet/
 
-Sense_Temp_Humidity
+Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
 - Components required for the programs in this folder include
   - 3 x 50 Ohm Resistors
   - 1 x 10 KOhm Resistors
@@ -40,4 +40,10 @@ Sense_Temp_Humidity
   - 1 x Speaker connected to the Raspberry Pi if you want it to speak
   - 1 x 3.5mm Audio cable to connect the speaker to the Raspberry Pi
 - Python Adafruit DHT Library - https://github.com/adafruit/Adafruit_Python_DHT
-- Data directory to log captured data in CSV form in /opt/data. Permissions on the folder to be granted to user executing the program.
+- Data directory to log captured data in CSV form in /opt/data. 
+  - The folder /opt/data will need to be created.
+  - Permissions on the folder to be granted to user executing the program.
+- To log data at the ThingSpeak IoT platform, create an account at ThingSpeak (https://thingspeak.com). 
+  - This program uses the DHT11 and logs both Temperatury, Humidity
+  - Create a new channel at Thingspeak. Create two new fields at ThingSpeak i.e. field1, field2
+  - Copy your API key to the program and update the WriteDataThinkSpeak() function.
