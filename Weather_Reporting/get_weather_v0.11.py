@@ -14,7 +14,7 @@ import httplib, urllib
 import pyowm
 import commands
 
-owm = pyowm.OWM('2866c7dec86f0ad873d0f626dafcd20e')  # You MUST provide a valid API key
+owm = pyowm.OWM('XXXX')  # You MUST provide a valid API key
 
 # Will it be sunny tomorrow at this time in Milan (Italy) ?
 #forecast = owm.daily_forecast("Milan,it")
