@@ -47,3 +47,12 @@ Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
   - This program uses the DHT11 and logs both Temperatury, Humidity
   - Create a new channel at Thingspeak. Create two new fields at ThingSpeak i.e. field1, field2
   - Copy your API key to the program and update the WriteDataThinkSpeak() function.
+
+Simple light sensor 
+- This is a very simple program that detects the presence of light or darkness
+- Components required include 
+  - 1 x Photoresistor Light Sensor module
+    - http://www.buildcircuit.com.au/Photoresistor-Sensor-Module-Light-Detection-for-arduino
+    - http://www.dx.com/p/6495-photoresistor-light-sensor-module-for-smart-car-black-blue-152774#.V9KBmZh97IU
+    - https://tkkrlab.nl/wiki/Arduino_KY-018_Photo_resistor_module 
+   - The first two links very closely resemble the one I've used
