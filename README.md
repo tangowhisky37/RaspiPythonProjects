@@ -21,7 +21,7 @@ BlinkLEDs
   - https://www.raspberrypi.org/learning/physical-computing-with-python/worksheet/
 
 
-Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
+IoT - Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
 - Components required for the programs in this folder include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
   - 3 x 50 Ohm Resistors
@@ -53,9 +53,18 @@ Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
   - Copy your API key to the program and update the WriteDataThinkSpeak() function.
 
 
+Weather Reporting using OWM (Log to CSV and ThingSpeak/IoT Platform)
+- While the Sense_Temp_Humidity project (above) was designed as a simple IoT (Internet Of Things) project to pull data from my DHT11 on the Raspberry Pi to be uploaded to ThingSpeak, Weather Reporting on the other hand pulls data from OpenWeatherMap and uploads the data to Thingspeak.
+- The objective of this project was to be able to compare the data for temperature, humidity being collected by my sensors at home with the data for the city i live in provided by Open Weather Map.
+- The project uses the Open Weather Map python library which you will need to download and install on the Raspberry Pi
+- Components required include - 
+ - Python module for OWM from https://github.com/csparpa/pyowm
+ - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.
+
+
 Simple light sensor 
 - The Simple Light Sensor is a very simple program that detects the presence of light or darkness
-- Components required include 
+- Components required include -
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
   - 1 x Photoresistor Light Sensor module
     - http://www.buildcircuit.com.au/Photoresistor-Sensor-Module-Light-Detection-for-arduino
@@ -84,7 +93,7 @@ Simple Motion sensor (PIR)
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
 
 
-Read Analog Sensors using MCP 3008 
+IoT - Read Analog Sensors using MCP 3008 & Upload data (Log to CSV and ThingSpeak/IoT Platform) 
 - This program reads analog sensor values using an MCP 3008. An MCP 3008 is required since the Raspberry Pi does not have an ADC or Analog to Digital converter and is not in a position to read analog signals by itself.  
 - Components required include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
