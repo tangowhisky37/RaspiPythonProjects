@@ -2,10 +2,12 @@
 
 This folder contains a list of all the Raspberry Pi projects I have been working on
 
+
 BlinkLEDs
 - This folder includes programs that uses the Raspberry Pi's GPIO pins to interact with multiple LED's
 - This folder also includes programs that use the Raspberry Pi's GPIO pins to interact with a simple push button
 - Components required for the programs in this folder include 
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
   - 3 x 50 Ohm Resistors
   - 3 x LED's
   - LED's connected to the following GPIO ports : led1 on GPIO17, led2 on GPIO27, led3 on GPIO22
@@ -18,8 +20,10 @@ BlinkLEDs
 - For additional reading please visit 
   - https://www.raspberrypi.org/learning/physical-computing-with-python/worksheet/
 
+
 Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
 - Components required for the programs in this folder include
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
   - 3 x 50 Ohm Resistors
   - 1 x 10 KOhm Resistors
   - 3 x LED's
@@ -48,11 +52,65 @@ Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
   - Create a new channel at Thingspeak. Create two new fields at ThingSpeak i.e. field1, field2
   - Copy your API key to the program and update the WriteDataThinkSpeak() function.
 
+
 Simple light sensor 
-- This is a very simple program that detects the presence of light or darkness
+- The Simple Light Sensor is a very simple program that detects the presence of light or darkness
 - Components required include 
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
   - 1 x Photoresistor Light Sensor module
     - http://www.buildcircuit.com.au/Photoresistor-Sensor-Module-Light-Detection-for-arduino
-    - http://www.dx.com/p/6495-photoresistor-light-sensor-module-for-smart-car-black-blue-152774#.V9KBmZh97IU
+    - http://www.dx.com/p/6495-photoresistor-light-sensor-module-for-smart-car-black-blue-152774
     - https://tkkrlab.nl/wiki/Arduino_KY-018_Photo_resistor_module 
-   - The first two links very closely resemble the one I've used
+    - The first two links very closely resemble the one I've used
+  - 1 x Breadboard
+  - 1 x Extension cable (Suggested) to extend the GPIO ports of the Raspberry Pi and bring them closed to the breadboard
+  - 10 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 1 x Tactile Push button
+  - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
+
+
+Simple Motion sensor (PIR)
+- This Simple Motion Sensor is a very simple program that detects the presence in a room using the PIR sensor and sets of an alarm 
+- Components required include
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
+  - 1 x PIR Motion Sensor
+    - https://littlebirdelectronics.com.au/products/pir-motion-sensor-module
+    - http://www.dx.com/p/ir-infrared-motion-detection-sensor-module-dc-5v-20v-139624
+    - http://www.dx.com/p/pyroelectric-infrared-pir-motion-sensor-detector-module-w-3-pin-cable-for-arduino-blue-white-397782 
+  - 1 x Breadboard
+  - 1 x Extension cable (Suggested) to extend the GPIO ports of the Raspberry Pi and bring them closed to the breadboard
+  - 10 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 1 x Tactile Push button
+  - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
+
+
+Read Analog Sensors using MCP 3008 
+- This program reads analog sensor values using an MCP 3008. An MCP 3008 is required since the Raspberry Pi does not have an ADC or Analog to Digital converter and is not in a position to read analog signals by itself.  
+- Components required include
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
+  - 1 x PIR Motion Sensor
+    - https://littlebirdelectronics.com.au/products/mcp3008-8-channel-10-bit-adc-with-spi-interface
+  - 1 x Breadboard
+  - 1 x Extension cable (Suggested) to extend the GPIO ports of the Raspberry Pi and bring them closed to the breadboard
+  - 10 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
+- To setup the project you will need to - 
+  - Read through the tutorial at Adafruit -
+    - https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi) 
+  - Download and install the Adafruit libraries to interact with the MCP3008
+
+
+Alexa on the Raspberry Pi 3
+- Alexa as you know is Amazon's Voice service and now configurable on most maker platforms including the Raspberry Pi 3. This project is a fork of Sam Machin's code base including use of a tactile button and a single RGB LED.
+- Components required include
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
+  - 1 x RGB LED 
+    - https://tkkrlab.nl/wiki/Arduino_KY-016_3-color_LED_module
+    - https://littlebirdelectronics.com.au/products/arduino-compatible-rgb-led-module
+    - http://www.dx.com/p/diy-arduino-3-color-rgb-smd-led-module-black-135046
+  - 1 x Breadboard
+  - 1 x Extension cable (Suggested) to extend the GPIO ports of the Raspberry Pi and bring them closed to the breadboard
+  - 10 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 1 x Tactile Push button
+  - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
+- Code base can be obtained from the following github repository - https://github.com/tangowhisky37/AlexaPi
