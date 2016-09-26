@@ -29,6 +29,7 @@ outsidehumidity = out.strip()
 
 cmd = "sudo rmmod i2c_bcm2708; sudo modprobe i2c_bcm2708;"
 os.system(cmd)
+sleep (2)
 mylcd = RPi_I2C_driver.lcd()
 mylcd.lcd_display_string("RmTemp %s DegC" %roomtemp, 1)
 mylcd.lcd_display_string("RmHumidity %s Pcnt" %roomhumidity, 2)
