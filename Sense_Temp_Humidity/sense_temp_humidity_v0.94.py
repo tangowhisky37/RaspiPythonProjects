@@ -47,7 +47,7 @@ greenled = LED(27)
 button = Button(2)
 
 def WriteDataCSV():
- #humidity, temperature = Adafruit_DHT.read_retry(sensor, pin) #Commenting this out since we are now acquiring data from Android
+ #humidity, temperature = Adafruit_DHT.read_retry(sensor, pin) #Commenting this out since we are now acquiring data from Arduino
  humidity = 0
  temperature = 0
  if humidity is not None and temperature is not None:
@@ -87,7 +87,7 @@ def WriteDataCSV():
 
 
 def WriteDataThingSpeak():
- #humidity, temperature = Adafruit_DHT.read_retry(sensor, pin) #Commenting this out since we are now acquiring data from Android
+ #humidity, temperature = Adafruit_DHT.read_retry(sensor, pin) #Commenting this out since we are now acquiring data from Arduino
  humidity = 0
  temperature = 0
  if humidity is not None and temperature is not None:
