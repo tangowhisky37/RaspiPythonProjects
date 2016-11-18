@@ -51,6 +51,9 @@ IoT - Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
   - This program uses the DHT11 and logs both Temperatury, Humidity
   - Create a new channel at Thingspeak. Create two new fields at ThingSpeak i.e. field1, field2
   - Copy your API key to the program and update the WriteDataThinkSpeak() function.
+  - This program has now been updated to pull data from a local Arduino Mega 2560 over http. The Arduino has a DHT11 connected to it.
+  - The Arduino also includes an Ethernet module based on the enc28j60 chip allowing it to connect over the network.
+  - For details on connecting up the Arduino and configuring the ethernet module please refer to my contribution at ArduinoProjects here on Github.
 
 
 Weather Reporting using OWM (Log to CSV and ThingSpeak/IoT Platform)
