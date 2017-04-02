@@ -139,6 +139,7 @@ Mopidy (Audio Server) on the Raspberry Pi 3
   - sudo apt-get install python-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools
   - sudo apt-get install gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0
 - You will now need to open up your Mopidy configuration file at /etc/mopidy/mopidy.conf and edit it to suit your requirements. For details on each of the configuration options please visit - https://docs.mopidy.com/en/latest/config/
+- Please including configuration for the Mopidy AlsaMixer module into /etc/mopidy/mopidy.conf file. You can refer to a sample config at https://github.com/mopidy/mopidy-alsamixer
 - Now that we've got this far we'll need to add the local repository to the configuration. See your [local] configuration section and add the location path to your music store.
 - Start up Mopidy using "sudo /path/to/mopidy --config /etc/mopidy/mopidy.conf" and you should review the errors on the screen. Work through the errors. 
 - Best case outcome would be that the only error is that the local plugin configuration has not found any files. Run the following command to initiate creation of a local cache, "sudo /path/to/mopidy --config /etc/mopidy/mopidy.conf local scan". This should run for a while depending on how much content you've got in your local music repository. I use my usb drive mounted on /mnt/usb0 and it took a while for Mopidy to scan through the content. 
