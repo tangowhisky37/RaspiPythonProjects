@@ -126,3 +126,27 @@ Alexa on the Raspberry Pi 3
   - 1 x Tactile Push button
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
 - Code base can be obtained from the following github repository - https://github.com/tangowhisky37/AlexaPi
+
+Mopidy (Audio Server) on the Raspberry Pi 3
+- Mopidy is an extensible music server that plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients. https://www.mopidy.com
+- Let's step through the commands to download and install the base Mopidy player on your RaspberryPi
+  - Download and install git on Raspbian using "sudo apt-get install git". This will install the git client on your RaspberryPi.
+  - Clone the github repository for Mopidy from https://github.com/mopidy/mopidy using "git clone https://github.com/mopidy/mopidy"
+  - Change into downloaded Mopidy directory to build and install using the following commands, "sudo python setup.py install"
+  - Clone the github repository for Mopidy-AlsaMixer from https://github.com/mopidy/mopidy-alsamixer using "git clone https://github.com/mopidy/mopidy-alsamixer"
+  - Change into the downloaded mopid-alsamixer directory to build and install using the following commands, "sudo python setup.py install"
+- You will also need to manually install the following packages. These are part of the pre-requisites which i found missing and spent sometime/effort understanding what was required. The commands are - 
+  - sudo apt-get install python-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools
+  - sudo apt-get install gir1.2-gstreamer-1.0 gir1.2-gst-plugins-base-1.0
+- You will now need to open up your Mopidy configuration file at /etc/mopidy/mopidy.conf and edit it to suit your requirements. For details on each of the configuration options please visit - https://docs.mopidy.com/en/latest/config/
+- Now that we've got this far we'll need to add the local repository to the configuration. See your [local] configuration section and add the location path to your music store.
+- Start up Mopidy using "sudo /path/to/mopidy --config /etc/mopidy/mopidy.conf" and you should review the errors on the screen. Work through the errors. 
+- Best case outcome would be that the only error is that the local plugin configuration has not found any files. Run the following command to initiate creation of a local cache, "sudo /path/to/mopidy --config /etc/mopidy/mopidy.conf local scan". This should run for a while depending on how much content you've got in your local music repository. I use my usb drive mounted on /mnt/usb0 and it took a while for Mopidy to scan through the content. 
+- Once you've setup mopidy you should confirm if you are able to connect to the User Interface. Start mopidy with the command, "sudo /path/to/mopidy --config /etc/mopidy/mopidy.conf". Then connect to the user interface via a web browser  http://RaspberryPI_IP_Address_Here:6680/
+- If you have the musicbox client installed you will see a link for it at the above page. Else you'll need to clone the git repository for Mopidy Musicbox Web client using "git clone https://github.com/pimusicbox/mopidy-musicbox-webclient"
+  - Change into the downloaded mopid-alsamixer directory to build and install using the following commands, "sudo python setup.py install"
+  - Once you've installed mopidy music box you should confirm if you are able to connect to the User Interface. 
+  - Start mopidy with the command, "sudo /path/to/mopidy --config /etc/mopidy/mopidy.conf".
+  - Then connect to the user interface via a web browser  http://RaspberryPI_IP_Address_Here:6680/musicbox_webclient/index.html
+- Enjoy listening to your music!!!
+
