@@ -149,5 +149,10 @@ Mopidy (Audio Server) on the Raspberry Pi 3
   - Once you've installed mopidy music box you should confirm if you are able to connect to the User Interface. 
   - Start mopidy with the command, "sudo /path/to/mopidy --config /etc/mopidy/mopidy.conf".
   - Then connect to the user interface via a web browser  http://RaspberryPI_IP_Address_Here:6680/musicbox_webclient/index.html
+- Check out these URL's if you are looking for Audio Streams to add to Musicbox
+  - https://www.internet-radio.com/ 
+  - http://www.australianliveradio.com/
+  - http://www.listenlive.eu/jazz.html 
+  - https://radio.abc.net.au/help/streams
 - Enjoy listening to your music!!!
 
