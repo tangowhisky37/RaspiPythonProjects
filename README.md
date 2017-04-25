@@ -173,7 +173,7 @@ Hacking the Disk Layout on a Raspberry Pi Model A
   - Reboot to activate the partition changes. You should check "fdisk -l" to see the changes.
   - On rebooting use "resize2fs /dev/mmclk0p2" to enlarge the root Linux file system.
   - Some sites recommended using, "e2fsck -f /dev/mmcblk0p2" to perform a file system check. This however didn't work for me hence i used the next step.
-  - If you perform the following, "touch /forcefsck" you will force an fsck at every boot. Just make sure you have the following entry in your /etc/fstav, "/dev/mmcblk0p2	/  ext4	defaults, noatime	0	1"
+  - If you perform the following, "touch /forcefsck" you will force an fsck at every boot. Just make sure you have the following entry in your /etc/fstab, "/dev/mmcblk0p2	/  ext4	defaults, noatime	0	1"
   - Create the new SWAP file system by using, "mkswap /dev/mmcblk0p3". 
   - Configure the /etc/fstab file with the following, "/dev/mmcblk0p3	swap	swap	defaults	0	0"
   - Reboot and you should see SWAP auto mounted. 
