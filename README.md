@@ -160,6 +160,7 @@ Mopidy (Audio Server) on the Raspberry Pi 3
 - Enjoy listening to your music!!!
 
 Hacking the Disk Layout on a Raspberry Pi Model A 
+- This guide was put together while i was assembling 4 Raspberry Pi's for the local Raspberry Pi Hackers group i run. 
 - I've had some challenges building the Raspberry Pi A. I used the stock Raspbian distro on a 8 GB SDHC card. The default file system is around ~4GB in size with SWAP around ~128 MB in size.
 - The updates ran really slow and i couldn't get any software loaded on it. So I decided to re-do the partitions and throw in some additinoal swap space. The memory on the device was 128MB with SWAP as 128 MB created part of the default install.
 - The steps to extending the file system and creating a new one are as follows - 
@@ -180,3 +181,7 @@ Hacking the Disk Layout on a Raspberry Pi Model A
     - https://www.raspberrypi.org/forums/viewtopic.php?f=51&t=45265
     - https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=86536
     - https://www.raspberrypi.org/forums/viewtopic.php?t=15870&p=884216
+
+Miscellaneous 
+- When setting up the Raspberry Pi always upgrade Node Red using the script provided, "bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)" 
+- Details on the manual upgrade are provided at - http://nodered.org/docs/hardware/raspberrypi 
