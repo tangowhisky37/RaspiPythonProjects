@@ -3,7 +3,7 @@
 This folder contains a list of all the Raspberry Pi projects I have been working on
 
 
-BlinkLEDs
+BlinkLEDs (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/BlinkLEDs) 
 - This folder includes programs that uses the Raspberry Pi's GPIO pins to interact with multiple LED's
 - This folder also includes programs that use the Raspberry Pi's GPIO pins to interact with a simple push button
 - Components required for the programs in this folder include 
@@ -21,7 +21,8 @@ BlinkLEDs
   - https://www.raspberrypi.org/learning/physical-computing-with-python/worksheet/
 
 
-IoT - Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
+IoT - Sense_Temp_Humidity (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Sense_Temp_Humidity) 
+- This project has evolved to Log data to CSV on the RaspberryPi and also upload data to the ThingSpeak/IoT Platform
 - Components required for the programs in this folder include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
   - 3 x 50 Ohm Resistors
@@ -56,16 +57,17 @@ IoT - Sense_Temp_Humidity (Log to CSV and ThingSpeak/IoT Platform)
   - For details on connecting up the Arduino and configuring the ethernet module please refer to my contribution at ArduinoProjects here on Github.
 
 
-Weather Reporting using OWM (Log to CSV and ThingSpeak/IoT Platform)
+Weather Reporting using OWM (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Sense_Temp_Humidity_Pull_Data_Arduino) 
 - While the Sense_Temp_Humidity project (above) was designed as a simple IoT (Internet Of Things) project to pull data from my DHT11 on the Raspberry Pi to be uploaded to ThingSpeak, Weather Reporting on the other hand pulls data from OpenWeatherMap and uploads the data to Thingspeak.
 - The objective of this project was to be able to compare the data for temperature, humidity being collected by my sensors at home with the data for the city i live in provided by Open Weather Map.
 - The project uses the Open Weather Map python library which you will need to download and install on the Raspberry Pi
+- This project has evolved to log data to CSV including upload of data to the ThingSpeak/IoT Platform
 - Components required include - 
  - Python module for OWM from https://github.com/csparpa/pyowm
  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.
 
 
-Simple light sensor 
+Simple light sensor (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/LightSensor)
 - The Simple Light Sensor is a very simple program that detects the presence of light or darkness
 - Components required include -
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
@@ -81,7 +83,7 @@ Simple light sensor
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
 
 
-Simple Motion sensor (PIR)
+Simple Motion sensor or PIR (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/PIR)
 - This Simple Motion Sensor is a very simple program that detects the presence in a room using the PIR sensor and sets of an alarm 
 - Components required include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
@@ -96,8 +98,9 @@ Simple Motion sensor (PIR)
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
 
 
-IoT - Read Analog Sensors using MCP 3008 & Upload data (Log to CSV and ThingSpeak/IoT Platform) 
+IoT - Read Analog Sensors using MCP 3008 & Upload data (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/ReadingAnalogSensors) 
 - This program reads analog sensor values using an MCP 3008. An MCP 3008 is required since the Raspberry Pi does not have an ADC or Analog to Digital converter and is not in a position to read analog signals by itself.  
+- This project has evolved to Log data to CSV including upload of data to the ThingSpeak/IoT Platform
 - Components required include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
   - 1 x PIR Motion Sensor
