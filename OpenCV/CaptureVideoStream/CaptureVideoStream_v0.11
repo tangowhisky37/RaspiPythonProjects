@@ -1,0 +1,31 @@
+#!/home/pi/.virtualenvs/cv2/bin/python
+
+from picamera.array import PiRGBArray
+from picamera import PiCamera
+import time
+import cv2
+
+#initialize the camera
+camera = PiCamera()
+camera.resolution = (640,480)
+camera.framerate = 32
+rawCapture = PiRGBArray(camera, size=(640,480))
+
+#allow the camera to warm up
+time.sleep(0.1)
+
+for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+ #grap the raw numpy array representing the image
+ #then initialize the timestamp including text
+ image = frame.array
+
+ #show the frame
+ cv2.imshow("Video Capture using OpenCV", image)
+ key = cv2.waitKey(1) & 0xFF
+
+ #clear the stream in prep for the next image
+ rawCapture.truncate(0)
+
+ #break from loop
+ if key == ord("q"):
+  break
