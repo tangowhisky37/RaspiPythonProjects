@@ -35,6 +35,7 @@ def extract_features(image):
         #for (ex,ey,ew,eh) in noses:
         #    cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
 
+    print "Found {0} faces in the picture!!!".format(len(faces))
     cv2.imshow('Mapping Faces within the Image', image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
