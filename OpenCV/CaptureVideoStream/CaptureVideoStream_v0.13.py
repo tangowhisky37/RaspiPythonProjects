@@ -21,6 +21,7 @@ rawCapture = PiRGBArray(camera, size=(640,480))
 time.sleep(2)
 
 while True:
+ time.sleep(1)
  camera.capture(rawCapture, format="bgr")
  img = rawCapture.array
  gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -40,15 +41,25 @@ while True:
      #for (ex,ey,ew,eh) in noses:
      #    cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
 
- print "Found {0} faces in the picture!!!".format(len(faces))
+ #printing messages to the screen
+ print "At time "+time.strftime("%d/%m/%y-%H:%M:%S")+", found {0} faces in the picture!!!".format(len(faces))
+
+ #writing the image to the screen
  cv2.imshow('Mapping Faces within the Image', img)
- #cv2.waitKey(0)
- #cv2.destroyAllWindows()
+
+ #writing the image to a file
+ #timestamp = time.strftime("%d/%m/%y-%H:%M:%S")
+ cv2.imwrite("temp.jpg",img)
+ 
+ #looking for escape sequence
  key = cv2.waitKey(1) & 0xFF
  if key == ord("q"):
     break
+ 
  #Clearing the buffer before loading the next image
  rawCapture.truncate(0)
+
+#Closing the capture, releasing all resources
 rawCapture.release()
 cv2.destroyAllWindows() 
 
