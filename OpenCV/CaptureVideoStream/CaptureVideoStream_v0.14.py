@@ -53,7 +53,7 @@ while True:
  #cv2.imwrite("temp"+str(time.strftime("%d/%m/%y-%H%M%S"))+".jpg",img)
  #cv2.imwrite("temp"+str(datetime.datetime.now())+".jpg",img)
  #cv2.imwrite("temp"+str(datetime.datetime.now().strftime("%d/%m/%y-%H/%M/%S"))+".jpg",img)
- cv2.imwrite("temp"+str(datetime.datetime.now())+".jpg",img)
+ cv2.imwrite("FaceCaptureWarrenPi-"+str(datetime.datetime.now())+".jpg",img)
  
  #looking for escape sequence
  key = cv2.waitKey(1) & 0xFF
