@@ -35,10 +35,13 @@ while True:
    roi_gray = gray[y:y+h, x:x+w]
    roi_color = img[y:y+h, x:x+w]
 
-   eyes = eye_cascade.detectMultiScale(roi_gray, minSize=(30, 30))
-   for (ex,ey,ew,eh) in eyes:
-     cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(255,0,0),2)
+   #The code on the next three lines works and has been tested out
+   #Disabling it because it's not required for purposes of identification of faces
+   #eyes = eye_cascade.detectMultiScale(roi_gray, minSize=(30, 30))
+   #for (ex,ey,ew,eh) in eyes:
+     #cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(255,0,0),2)
 
+     #Detection of code for noses has not been validated or tested
      #noses = nose_cascade.detectMultiScale(roi_gray, minSize=(100, 30))
      #for (ex,ey,ew,eh) in noses:
      #    cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,255),2)
@@ -47,6 +50,9 @@ while True:
  print "At time "+time.strftime("%d/%m/%y-%H:%M:%S")+", found {0} faces in the picture!!!".format(len(faces))
 
  #writing the image to the screen
+ font = cv2.FONT_HERSHEY_SIMPLEX
+ #cv2.putText(img, str(datetime.datetime.now().strftime("%d/%m/%y-%H/%M/%S")), (100,500), font, 4,(255,255,255),2) 
+ cv2.putText(img, "DateTime - "+str(datetime.datetime.now().strftime("%d/%m/%y %H:%M:%S")), (5,25), font, 0.5,(255,255,255)) 
  cv2.imshow('Mapping Faces within the Image', img)
 
  #writing the image to a file
