@@ -72,11 +72,11 @@ Weather Reporting and Writing to LCD Screen (https://github.com/tangowhisky37/Ra
 - The program builds upon another LCD library that was downloaded from the internet and is made available in the same folder
 - The code for obtaining the temperature, humidity and other information from the OWM service using python is described above. Please reference the previous project.
 - This project simply pulls the data from the log file and displays it to the screen refreshing it regularly. 
-- Updates - 
-  -- I ran an upgrade (dist-upgrade) to upgrade Raspbian to the latest version. For some reason i found an additional entry in the "/boot/config.txt" file called "dtparam=i2c=on1=on"
-  -- This entry was causing me a lot of grief and as a result the LCD wasn't being seen on the i2c bus by the Raspberry Pi 3. 
-  -- I would recommend looking for this entry if you have issues finding your LCD on the i2c bus and disabling it.
-  -- Please note the other entry "dtparam=i2c_arm=on" is required.
+- Updates (030617) - 
+  - I ran an upgrade (dist-upgrade) to upgrade Raspbian to the latest version. For some reason i found an additional entry in the "/boot/config.txt" file called "dtparam=i2c=on1=on"
+  - This entry was causing me a lot of grief and as a result the LCD wasn't being seen on the i2c bus by the Raspberry Pi 3. 
+  - I would recommend looking for this entry if you have issues finding your LCD on the i2c bus and disabling it.
+  - Please note the other entry "dtparam=i2c_arm=on" is required.
 
 Simple light sensor (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/LightSensor)
 - The Simple Light Sensor is a very simple program that detects the presence of light or darkness
