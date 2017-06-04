@@ -66,6 +66,17 @@ Weather Reporting using OWM (https://github.com/tangowhisky37/RaspiPythonProject
  - Python module for OWM from https://github.com/csparpa/pyowm
  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.
 
+Weather Reporting and Writing to LCD Screen (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Write_To_LCD_Screen) 
+- While the Sense_Temp_Humidity project (above) was designed as a simple IoT (Internet Of Things) project to pull data from my DHT11 on the Raspberry Pi to be uploaded to ThingSpeak, Weather Reporting on the other hand pulls data from OpenWeatherMap and uploads the data to Thingspeak. The Weather Reporting project (above) was also updated to log information to the local file system for purposes of further analysis. 
+- The objective of this project was to obtain the last value of the temperature, humidity (inside the house, in the city) and display it to the screen.
+- The program builds upon another LCD library that was downloaded from the internet and is made available in the same folder
+- The code for obtaining the temperature, humidity and other information from the OWM service using python is described above. Please reference the previous project.
+- This project simply pulls the data from the log file and displays it to the screen refreshing it regularly. 
+- Updates (030617) - 
+  - I ran an upgrade (dist-upgrade) to upgrade Raspbian to the latest version. For some reason i found an additional entry in the "/boot/config.txt" file called "dtparam=i2c=on1=on"
+  - This entry was causing me a lot of grief and as a result the LCD wasn't being seen on the i2c bus by the Raspberry Pi 3. 
+  - I would recommend looking for this entry if you have issues finding your LCD on the i2c bus and disabling it.
+  - Please note the other entry "dtparam=i2c_arm=on" is required.
 
 Simple light sensor (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/LightSensor)
 - The Simple Light Sensor is a very simple program that detects the presence of light or darkness
