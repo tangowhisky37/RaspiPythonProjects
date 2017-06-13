@@ -1,12 +1,15 @@
 OpenCV - This repository hosts code for various python OpenCV projects that have been developed for the Raspberry Pi.
 
 - Roadmap includes - 
-  - Simple capture of images.
-  - Capture video and look for faces.
-  - Capture video, look for faces and once faces are found log image to disk.
-  - Capture video, look for faces and once faces are found log image to AWS S3.
-  - Capture video, look for faces, once faces are found log image to AWS S3 and send to AWS rekognition for comparison.
-  - Capture video, look for faces, once faces are found log image to AWS S3, send to AWS rekognition for comparison and call out object found.
+  - Step 1 - Simple capture of images.
+  - Step 2 -  Capture video and look for faces.
+  - Step 3 -  Capture video, look for faces and once faces are found log image to disk.
+  - Step 4 -  Capture video, look for faces and once faces are found log image to AWS S3.
+  - Step 5 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison.
+  - Step 6 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text).
+  - Step 7 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition.
+  - Step 8 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message.
+  - Step 9 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message, Raspberry Pi picks up message as a subscriber to the topic and reads results of face comparison, verbalise results using STT (Speech To Text).
 
 - Projects include - 
   - OpenCV Simple CaptureImage -
