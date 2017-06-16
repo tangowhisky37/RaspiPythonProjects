@@ -1,0 +1,13 @@
+Simple Motion sensor or PIR (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/PIR)
+- This Simple Motion Sensor is a very simple program that detects the presence in a room using the PIR sensor and sets of an alarm 
+- Components required include
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
+  - 1 x PIR Motion Sensor
+    - https://littlebirdelectronics.com.au/products/pir-motion-sensor-module
+    - http://www.dx.com/p/ir-infrared-motion-detection-sensor-module-dc-5v-20v-139624
+    - http://www.dx.com/p/pyroelectric-infrared-pir-motion-sensor-detector-module-w-3-pin-cable-for-arduino-blue-white-397782 
+  - 1 x Breadboard
+  - 1 x Extension cable (Suggested) to extend the GPIO ports of the Raspberry Pi and bring them closed to the breadboard
+  - 10 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 1 x Tactile Push button
+  - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
