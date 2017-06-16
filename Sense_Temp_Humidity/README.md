@@ -1,0 +1,34 @@
+IoT - Sense_Temp_Humidity (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Sense_Temp_Humidity) 
+- This project has evolved to Log data to CSV on the RaspberryPi and also upload data to the ThingSpeak/IoT Platform
+- Components required for the programs in this folder include
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
+  - 3 x 50 Ohm Resistors
+  - 1 x 10 KOhm Resistors
+  - 3 x LED's
+  - LED's connected to the following GPIO ports : Red LED on GPIO17, amber LED on GPIO27, Green LED on GPIO22
+  - 1 x Breadboard
+  - 1 x Extension cable (Suggested) to extend the GPIO ports of the Raspberry Pi and bring them closed to the breadboard
+  - 6 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 4 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 1 x Tactile Push button
+  - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
+  - 1 x Arduino compatible Temperature and Humidity sensor 
+    - http://www.jaycar.com.au/arduino-compatible-temperature-and-humidity-sensor-module/p/XC4520
+    - https://littlebirdelectronics.com.au/products/arduino-compatible-temperature-and-humidity-sensor-module
+    - https://tkkrlab.nl/wiki/Arduino_KY-001_Temperature_sensor_module
+    - https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing
+    - https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/temperature/
+    - Sensor should be connected to GPIO04 (Pin 7) 
+  - 1 x Speaker connected to the Raspberry Pi if you want it to speak
+  - 1 x 3.5mm Audio cable to connect the speaker to the Raspberry Pi
+- Python Adafruit DHT Library - https://github.com/adafruit/Adafruit_Python_DHT
+- Data directory to log captured data in CSV form in /opt/data. 
+  - The folder /opt/data will need to be created.
+  - Permissions on the folder to be granted to user executing the program.
+- To log data at the ThingSpeak IoT platform, create an account at ThingSpeak (https://thingspeak.com). 
+  - This program uses the DHT11 and logs both Temperatury, Humidity
+  - Create a new channel at Thingspeak. Create two new fields at ThingSpeak i.e. field1, field2
+  - Copy your API key to the program and update the WriteDataThinkSpeak() function.
+  - This program has now been updated to pull data from a local Arduino Mega 2560 over http. The Arduino has a DHT11 connected to it.
+  - The Arduino also includes an Ethernet module based on the enc28j60 chip allowing it to connect over the network.
+  - For details on connecting up the Arduino and configuring the ethernet module please refer to my contribution at ArduinoProjects here on Github.
