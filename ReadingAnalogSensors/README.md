@@ -1,0 +1,15 @@
+IoT - Read Analog Sensors using MCP 3008 & Upload data (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/ReadingAnalogSensors) 
+- This program reads analog sensor values using an MCP 3008. An MCP 3008 is required since the Raspberry Pi does not have an ADC or Analog to Digital converter and is not in a position to read analog signals by itself.  
+- This project has evolved to Log data to CSV including upload of data to the ThingSpeak/IoT Platform
+- Components required include
+  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
+  - 1 x PIR Motion Sensor
+    - https://littlebirdelectronics.com.au/products/mcp3008-8-channel-10-bit-adc-with-spi-interface
+  - 1 x Breadboard
+  - 1 x Extension cable (Suggested) to extend the GPIO ports of the Raspberry Pi and bring them closed to the breadboard
+  - 10 x Jumper cables - Female (connect to Rasberry Pi GPIO) to Male (Connect to the Breadboard)
+  - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
+- To setup the project you will need to - 
+  - Read through the tutorial at Adafruit -
+    - https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi) 
+  - Download and install the Adafruit libraries to interact with the MCP3008
