@@ -7,9 +7,10 @@ OpenCV - This repository hosts code for various python OpenCV projects that have
   - Step 4 -  Capture video, look for faces and once faces are found log image to AWS S3.
   - Step 5 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison.
   - Step 6 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text).
-  - Step 7 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition.
-  - Step 8 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message.
-  - Step 9 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message, Raspberry Pi picks up message as a subscriber to the topic and reads results of face comparison, verbalise results using STT (Speech To Text).
+  - Step 7 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text), call out local time, temperature and forecast for the day.
+  - Step 8 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition.
+  - Step 9 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message.
+  - Step 10 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message, Raspberry Pi picks up message as a subscriber to the topic and reads results of face comparison, verbalise results using STT (Speech To Text).
 
 - Projects include - 
   - OpenCV Simple CaptureImage -
