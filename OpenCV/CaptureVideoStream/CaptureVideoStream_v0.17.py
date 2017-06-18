@@ -11,7 +11,11 @@ import sys
 import datetime
 import boto3
 import subprocess 
+import os
+import pyowm
+import commands
 
+#AWS Rekognition variables & code
 bucket_source_var = "tw37-opencv"
 #key_source_var = "new_image_name.jpg"
 key_target_var = "orignal_trevor_1706.jpg"
@@ -35,6 +39,38 @@ def compare_faces(bucket, key, bucket_target, key_target, threshold=80, region="
 	    SimilarityThreshold=threshold,
 	)
 	return response['SourceImageFace'], response['FaceMatches']
+
+#OWM Weather Data Functions
+def WeatherProcessing():
+ owm = pyowm.OWM('2866c7dec86f0ad873d0f626dafcd20e')  # You MUST provide a valid API key
+
+ # Search for current weather in Melbourne (Australia)
+ observation = owm.weather_at_place('Melbourne,au')
+ w = observation.get_weather()
+
+ #Get Weather details
+ Wind = w.get_wind()                          # {'speed': 4.6, 'deg': 330}
+ #SWind = w.get_wind()['speed']               # 4
+ Humidity = w.get_humidity()                  # 87
+ Temperature = w.get_temperature('celsius')   # {'temp_max': 10.5, 'temp': 9.7, 'temp_min': 9.0}
+ Clouds = w.get_clouds()
+ Rainfall = w.get_rain()
+ Pressure = w.get_pressure()
+
+ #Output for debugging purpose
+ print ("                                                         ")
+ print ("                                                         ")
+ print ("****************************************************************************************************")
+ print ("Current wind Speed and Direction right now in Melbourne is =  %s " %Wind)
+ print ("Current Temperature in Melbourne is = %s" %Temperature)
+ print ("Current Humidity in Melbourne is = %s Percent" %Humidity)
+ print ("Cloud ceiling across Melbourne is %s thousand feet" %Clouds)
+ print ("Current Rainfall across Melbourne is %s " %Rainfall)
+ print ("Barometric Pressure across Melbourne is %s " %Pressure)
+ print ("****************************************************************************************************")
+ print ("                                                         ")
+ print ("                                                         ")
+ 
 
 face_cascade = cv2.CascadeClassifier('/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('/usr/local/share/OpenCV/haarcascades/haarcascade_eye.xml')
@@ -115,6 +151,7 @@ while True:
    if (match['Similarity'] > 80):
     print "Hi Trevor, Welcome back."
     subprocess.call("espeak \" Hi Trevor Welcome back \" ", shell=True)
+    WeatherProcessing()
 
  #looking for escape sequence
  key = cv2.waitKey(1) & 0xFF
