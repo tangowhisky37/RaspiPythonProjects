@@ -1,16 +1,16 @@
 OpenCV - This repository hosts code for various python OpenCV projects that have been developed for the Raspberry Pi.
 
 - Roadmap includes - 
-  - Step 1 - Simple capture of images.
-  - Step 2 -  Capture video and look for faces.
-  - Step 3 -  Capture video, look for faces and once faces are found log image to disk.
-  - Step 4 -  Capture video, look for faces and once faces are found log image to AWS S3.
-  - Step 5 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison.
-  - Step 6 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text).
-  - Step 7 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text), call out local time, temperature and forecast for the day.
-  - Step 8 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition.
-  - Step 9 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message.
-  - Step 10 -  Capture video, look for faces, once faces are found log image to AWS S3, use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition, results of comparison is send through SNS as a published message, Raspberry Pi picks up message as a subscriber to the topic and reads results of face comparison, verbalise results using STT (Speech To Text).
+  - Step 1 - Simple capture of images. (Done)
+  - Step 2 -  Capture video and look for faces. (Done)
+  - Step 3 -  Capture video, look for faces and once faces are found log image to disk. (Done)
+  - Step 4 -  Capture video, look for faces and once faces are found log image to AWS S3. (Done)
+  - Step 5 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison. (Done)
+  - Step 6 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text). (Done)
+  - Step 7 -  Capture video, look for faces, once faces are found log image to AWS S3, compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text), call out local time, temperature and forecast for the day. (In Progress)
+  - Step 8 -  Capture video, look for faces and once faces are found log image to AWS S3. Fork a thread to compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text), call out local time, temperature and forecast for the day. (In Progress)
+  - Step 9 -  Capture video, look for faces and once faces are found log image to AWS S3. Fork a process to compare uploaded image to orignal image at S3 using AWS rekognition, display results of face comparison, verbalise results using STT (Speech To Text), call out local time, temperature and forecast for the day. (In Progress)  
+  - Step 10 -  Capture video, look for faces and once faces are found log image to AWS S3 all performed using one thread. Use AWS Lambda to launch a step function which compares uploaded image to orignal image at S3 using AWS rekognition and then uses SNS to send notification. Pick up notification on a separate thread, verbalise results using STT (Speech To Text). (Planned)
 
 - Projects include - 
   - OpenCV Simple CaptureImage -
