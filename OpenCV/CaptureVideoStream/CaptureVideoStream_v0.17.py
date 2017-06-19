@@ -42,7 +42,7 @@ def compare_faces(bucket, key, bucket_target, key_target, threshold=80, region="
 
 #OWM Weather Data Functions
 def WeatherProcessing():
- owm = pyowm.OWM('2866c7dec86f0ad873d0f626dafcd20e')  # You MUST provide a valid API key
+ owm = pyowm.OWM('xxxxxxxxxxxxxxxx')  # You MUST provide a valid API key
 
  # Search for current weather in Melbourne (Australia)
  observation = owm.weather_at_place('Melbourne,au')
