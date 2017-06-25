@@ -81,6 +81,7 @@ Here's a tutorial on the very basics of git. These are provided in a logical seq
 
 - Additional Reading
   - For additional reading please visit - 
+    - kbroman.org/github_tutorial/
     - www.atlassian.com/git/tutorials/ 
     - www.tutorialspoint.com/git/index.htm
     - codeacademy/com/learn/learn-git
