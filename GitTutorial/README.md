@@ -39,7 +39,7 @@ Here's a tutorial on the very basics of git. These are provided in a logical seq
   - So you'll now perform all your development inside the new folder.
   - You are free to copy content from other folders you might have locally which you want to sync up into the repo.
   - To add a new file to a repo issue the following commands
-  - bash# git add <filename> 
+  - bash# git add filename.txt 
   - You can also add whole folders, subfolders and files by issuing the following command
   - bash# git add *
 
@@ -57,6 +57,12 @@ Here's a tutorial on the very basics of git. These are provided in a logical seq
   - Finally check the files into the repo using the following command
   - bash# git push --set-upstream origin master 
   - You will be asked for your github account details. Once you've provided them the code will by pushed into the main repo.
+  
+- Pulling updates from your github repo into local repo
+  - There will be times where someone else might make changes that have synced up with your repo
+  - Or you might have made changes using the web interface and now want to pull the updates down to your local machine. 
+  - Issue the following commands in the folder where you had cloned the repo earlier.
+  - bash# git pull
 
 - Creating A New Repo (Remotely) & Pushing Content to Github
   - I have intentionally kept this at the end to keep things simple for you. The easiest way to get started is as mentiond at the start of the tutorial i.e. create a repo online at github.com and then clone the repository to your local development environment wherever it might be located. 
