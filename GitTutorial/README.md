@@ -46,6 +46,12 @@ Here's a tutorial on the very basics of git. These are provided in a logical seq
   - Finally check the files into the repo using the following command
   - bash# git push --set-upstream origin master 
   - You will be asked for your github account details. Once you've provided them the code will by pushed into the main repo.
+  
+- Pulling updates from your github repo into local repo
+  - There will be times where someone else might make changes that have synced up with your repo
+  - Or you might have made changes using the web interface and now want to pull the updates down to your local machine. 
+  - Issue the following commands in the folder where you had cloned the repo earlier.
+  - bash# git pull
 
 - Additional Reading
   - For additional reading please visit - 
