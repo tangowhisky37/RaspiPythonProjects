@@ -29,7 +29,7 @@ Here's a tutorial on the very basics of git. These are provided in a logical seq
   - So you'll now perform all your development inside the new folder.
   - You are free to copy content from other folders you might have locally which you want to sync up into the repo.
   - To add a new file to a repo issue the following commands
-  - bash# git add <filename> 
+  - bash# git add filename.txt 
   - You can also add whole folders, subfolders and files by issuing the following command
   - bash# git add *
 
