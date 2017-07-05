@@ -1,6 +1,6 @@
 # RaspiPythonProjects
 
-This folder contains a list of all the Raspberry Pi projects I have been working on
+This folder contains a list of all the Raspberry Pi projects I have been working on. For a listing of all these projects including detailed HowTo's for the Raspbery pi please visit - [https://tangowhisky37.github.io/RasPiSetupGuide/](https://tangowhisky37.github.io/RasPiSetupGuide/)
 
 
 BlinkLEDs (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/BlinkLEDs) 
