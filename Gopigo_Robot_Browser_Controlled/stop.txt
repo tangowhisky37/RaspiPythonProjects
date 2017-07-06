@@ -1,0 +1,14 @@
++++ readlink -f /home/pi/Downloads/installers/RPi_Cam_Web_Interface/stop.sh
+++ dirname /home/pi/Downloads/installers/RPi_Cam_Web_Interface/stop.sh
++ cd /home/pi/Downloads/installers/RPi_Cam_Web_Interface
++ source ./config.txt
+++ rpicamdir=raspicam
+++ webserver=apache
+++ webport=80
+++ user=twarren
+++ webpasswd=entsysperf234
+++ autostart=yes
++ fn_stop
++ sudo killall raspimjpeg
++ sudo killall php
++ sudo killall motion
