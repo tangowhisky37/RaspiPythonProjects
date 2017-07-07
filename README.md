@@ -3,7 +3,7 @@
 This folder contains a list of all the Raspberry Pi projects I have been working on. For a listing of all these projects including detailed HowTo's for the Raspberry pi please visit - [https://tangowhisky37.github.io/RasPiSetupGuide/](https://tangowhisky37.github.io/RasPiSetupGuide/)
 
 
-BlinkLEDs (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/BlinkLEDs) 
+### BlinkLEDs (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/BlinkLEDs) 
 - This folder includes programs that uses the Raspberry Pi's GPIO pins to interact with multiple LED's
 - This folder also includes programs that use the Raspberry Pi's GPIO pins to interact with a simple push button
 - Components required for the programs in this folder include 
@@ -21,7 +21,7 @@ BlinkLEDs (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Blin
   - https://www.raspberrypi.org/learning/physical-computing-with-python/worksheet/
 
 
-IoT - Sense_Temp_Humidity (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Sense_Temp_Humidity) 
+### IoT - Sense_Temp_Humidity (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Sense_Temp_Humidity) 
 - This project has evolved to Log data to CSV on the RaspberryPi and also upload data to the ThingSpeak/IoT Platform
 - Components required for the programs in this folder include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
@@ -57,7 +57,7 @@ IoT - Sense_Temp_Humidity (https://github.com/tangowhisky37/RaspiPythonProjects/
   - For details on connecting up the Arduino and configuring the ethernet module please refer to my contribution at ArduinoProjects here on Github.
 
 
-Weather Reporting using OWM (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Sense_Temp_Humidity_Pull_Data_Arduino) 
+### Weather Reporting using OWM (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Sense_Temp_Humidity_Pull_Data_Arduino) 
 - While the Sense_Temp_Humidity project (above) was designed as a simple IoT (Internet Of Things) project to pull data from my DHT11 on the Raspberry Pi to be uploaded to ThingSpeak, Weather Reporting on the other hand pulls data from OpenWeatherMap and uploads the data to Thingspeak.
 - The objective of this project was to be able to compare the data for temperature, humidity being collected by my sensors at home with the data for the city i live in provided by Open Weather Map.
 - The project uses the Open Weather Map python library which you will need to download and install on the Raspberry Pi
@@ -66,7 +66,7 @@ Weather Reporting using OWM (https://github.com/tangowhisky37/RaspiPythonProject
  - Python module for OWM from https://github.com/csparpa/pyowm
  - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.
 
-Weather Reporting and Writing to LCD Screen (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Write_To_LCD_Screen) 
+### Weather Reporting and Writing to LCD Screen (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/Write_To_LCD_Screen) 
 - While the Sense_Temp_Humidity project (above) was designed as a simple IoT (Internet Of Things) project to pull data from my DHT11 on the Raspberry Pi to be uploaded to ThingSpeak, Weather Reporting on the other hand pulls data from OpenWeatherMap and uploads the data to Thingspeak. The Weather Reporting project (above) was also updated to log information to the local file system for purposes of further analysis. 
 - The objective of this project was to obtain the last value of the temperature, humidity (inside the house, in the city) and display it to the screen.
 - The program builds upon another LCD library that was downloaded from the internet and is made available in the same folder
@@ -78,7 +78,7 @@ Weather Reporting and Writing to LCD Screen (https://github.com/tangowhisky37/Ra
   - I would recommend looking for this entry if you have issues finding your LCD on the i2c bus and disabling it.
   - Please note the other entry "dtparam=i2c_arm=on" is required.
 
-Simple light sensor (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/LightSensor)
+### Simple light sensor (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/LightSensor)
 - The Simple Light Sensor is a very simple program that detects the presence of light or darkness
 - Components required include -
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
@@ -94,7 +94,7 @@ Simple light sensor (https://github.com/tangowhisky37/RaspiPythonProjects/tree/m
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
 
 
-Simple Motion sensor or PIR (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/PIR)
+### Simple Motion sensor or PIR (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/PIR)
 - This Simple Motion Sensor is a very simple program that detects the presence in a room using the PIR sensor and sets of an alarm 
 - Components required include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
@@ -109,7 +109,7 @@ Simple Motion sensor or PIR (https://github.com/tangowhisky37/RaspiPythonProject
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
 
 
-IoT - Read Analog Sensors using MCP 3008 & Upload data (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/ReadingAnalogSensors) 
+### IoT - Read Analog Sensors using MCP 3008 & Upload data (https://github.com/tangowhisky37/RaspiPythonProjects/tree/master/ReadingAnalogSensors) 
 - This program reads analog sensor values using an MCP 3008. An MCP 3008 is required since the Raspberry Pi does not have an ADC or Analog to Digital converter and is not in a position to read analog signals by itself.  
 - This project has evolved to Log data to CSV including upload of data to the ThingSpeak/IoT Platform
 - Components required include
@@ -126,7 +126,7 @@ IoT - Read Analog Sensors using MCP 3008 & Upload data (https://github.com/tango
   - Download and install the Adafruit libraries to interact with the MCP3008
 
 
-Alexa on the Raspberry Pi 3
+### Alexa on the Raspberry Pi 3
 - Alexa as you know is Amazon's Voice service and now configurable on most maker platforms including the Raspberry Pi 3. This project is a fork of Sam Machin's code base including use of a tactile button and a single RGB LED.
 - Components required include
   - 1 x Raspberry Pi 3 (I have used a 3, Model B. You can use whatever you have at your disposal.)
@@ -141,7 +141,7 @@ Alexa on the Raspberry Pi 3
   - 1 x Raspberry Pi Cobbler board (Recommended, to breakout the GPIO's) and make working easier
 - Code base can be obtained from the following github repository - https://github.com/tangowhisky37/AlexaPi
 
-Mopidy (Audio Server) on the Raspberry Pi 3
+### Mopidy (Audio Server) on the Raspberry Pi 3
 - Mopidy is an extensible music server that plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients. Head off to https://www.mopidy.com to learn more about the Mopidy music server.
 - Let's step through the commands to download and install the base Mopidy player on your RaspberryPi
   - Download and install git on Raspbian using "sudo apt-get install git". This will install the git client on your RaspberryPi. You will need the git client to clone a lot of the repositories included in this tutorial.
@@ -173,7 +173,7 @@ Mopidy (Audio Server) on the Raspberry Pi 3
 - Obviously you might consider automating the startup of Mopidy. Like everything on unix/linux there's tons of ways of doing this. You could consider using daemon (daemontools) or simply /etc/rc.d/rc.local. Key in the startup command into rc.local and reboot the machine to find mopidy running in the background.
 - Enjoy listening to your music!!!
 
-Hacking the Disk Layout on a Raspberry Pi Model A 
+### Hacking the Disk Layout on a Raspberry Pi Model A 
 - Update (180517) - 
   - I've been doing a bit of reading and realized that after all re-partitioning might not be really required to increase SWAP
   - On the Raspberry Pi one can edit /etc/dphys-swapfile and set the swap file size
@@ -202,6 +202,6 @@ Hacking the Disk Layout on a Raspberry Pi Model A
     - https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=86536
     - https://www.raspberrypi.org/forums/viewtopic.php?t=15870&p=884216
 
-Miscellaneous 
+### Miscellaneous 
 - When setting up the Raspberry Pi always upgrade Node Red using the script provided, "bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)" 
 - Details on the manual upgrade are provided at - http://nodered.org/docs/hardware/raspberrypi 
