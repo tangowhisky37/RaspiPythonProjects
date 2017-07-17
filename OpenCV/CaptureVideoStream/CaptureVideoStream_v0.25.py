@@ -12,10 +12,17 @@
 ## - Log directory - To be created at /opt/data/
 ## - Create log files - Create log files eg. face_capture_time_log.txt.
 ##   Each person you are  scanning for requires a separate log file.
-##   See code below.
-## - Pre-poluate log files - Create dumy entries as mentioned above.
+##   See code below. You will need to prepopulate with dummy entries. 
+## - Pre-poluate log files - Create dumy entries as mentioned above. Each
+##   user you scan for requires their own log file. See code below.
 ## - OWM setup - Install Pyowm and obtain your key from WeatherUnderground
 ## - AWS setup - Install Boto3, create AWS credentials and configure awscli
+##   Your updated AWS credentials will be stored in ~/.aws/config. 
+## - OpenCV3 - Install OpenCV2 for Python2. This code is written for Python2.7
+## - Haar Cascade files - Make sure you have HAAR cascased located at 
+##   '/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml'
+## - Directories to store images - The directories where images are stores has 
+##   hard coded. You will need to change them to suit your installation.
 ##########################################################################
 '''
 
