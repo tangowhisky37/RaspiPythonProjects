@@ -14,17 +14,50 @@
 ![Controlling the GoPiGo robot with a mobile phone](https://raw.githubusercontent.com/DexterInd/GoPiGo/master/Software/Python/Examples/Browser_Streaming_Robot/Raspberry_Pi_Camera_controlled-by-mobile-browser.jpg "Streaming video from your Raspberry Pi Robot to your mobile phone.")
 
 **Usage:**
-- Make robot_web_server.py executable
+
+* To start we need to resolve a bunch of depedencies and install some software. So let's get going.
+* Make the browser_stream_setup.sh script executable
+
+ >      bash# chmod +x ./browser_stream_setup.sh
+
+* Execute the script to kick off the installation
+
+ >      bash# sudo ./browser_stream_setup.sh
+
+* During the installation you will see errors about mjpg-streamer. Don't stress we will manually install them next.
+* Once the installer has done it's job open up a console and download the fork of mjpg-streamer for the Raspberry Pi from github.
+
+ >      bash# git clone https://github.com/jacksonliam/mjpg-streamer
+
+* The above project is a fork of http://sourceforge.net/projects/mjpg-streamer/ with added support for the Raspberry Pi camera via the input_raspicam plugin.
+* mjpg-streamer is a command line application that copies JPEG frames from one or more input plugins to multiple output plugins. 
+* It can be used to stream JPEG files over an IP-based network from a webcam to various types of viewers such as Chrome, Firefox, Cambozola, VLC, mplayer, and other software capable of receiving MJPG streams.
+* It was originally written for embedded devices with very limited resources in terms of RAM and CPU. 
+* Its predecessor "uvc_streamer" was created because Linux-UVC compatible cameras directly produce JPEG-data, allowing fast and perfomant M-JPEG streams even from an embedded device running OpenWRT. 
+* The input module "input_uvc.so" captures such JPG frames from a connected webcam. mjpg-streamer now supports a variety of different input devices.   
+* You must have cmake installed. You will also probably want to have a development version of libjpeg installed. We used libjpeg8-dev based on guidance from the developers. e.g.
+* So let's proceed, install the dependencies for mjpg-streamer and then compile, build and install mjpg-streamer from source.
+
+ >      bash# sudo apt-get install cmake libjpeg8-dev
+
+* The following commands will build and install all plugins that can be compiled.
+
+ >      bash# cd mjpg-streamer-experimental
+ >      bash# make
+ >      bash# sudo make install
+
+* With all the installation now out of the way you are now able to proceed with launch of the streaming, browser control program.
+*  Make robot_web_server.py executable
 
  >      bash# chmod +x robot_web_server.py
 
-- Run robot_web_server.py which launches the Python Tornado web server
-- Open a web browser on any computer or mobile device and enter the following in the address bar:
+* Run robot_web_server.py which launches the Python Tornado web server
+* Open a web browser on any computer or mobile device and enter the following in the address bar:
 
  >      http://IP_Address_Of_Your_Raspberry_Pi:98
 
-- The page that hosts the streaming video and browser control application runs on the local IP address of the Pi on port 98
-- The video stream would load up and you can use the joystick on the screen to control the GoPiGo
+* The page that hosts the streaming video and browser control application runs on the local IP address of the Pi on port 98
+* The video stream would load up and you can use the joystick on the screen to control the GoPiGo
 
 ![ GoPiGo ](https://raw.githubusercontent.com/DexterInd/GoPiGo/master/GoPiGo_Chassis-300.jpg)
 
