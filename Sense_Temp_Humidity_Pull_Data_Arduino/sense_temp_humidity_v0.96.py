@@ -1,31 +1,5 @@
 #!/usr/bin/python
 
-# Trevor W - The code to measure Humidity/Temp has been obtained from the Adafruit examples
-# To execute the script - bash# sudo ./sense_temp_humidity_v0.7.py 11 4
-# First input variable is the DHT11 or DHT22. Second input variable is the GPIO pin. Please use GPIO4.
-
-# Including original copyright since part of the code (for the temp/humidity module) was obtained from Adafruit
-# Copyright (c) 2014 Adafruit Industries
-# Author: Tony DiCola
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
 from gpiozero import LED
 from gpiozero import Button
 from signal import pause
@@ -48,23 +22,25 @@ button = Button(2)
 
 def WriteDataCSV():
  #Acquire data from Arduino, first for temp and next for humidity
- page = requests.get('http://10.100.10.10')
+ page = requests.get('http://192.168.1.24')
  tree = html.fromstring(page.content)
- bulletpoints = tree.xpath('//li/text()')
+ bulletpoints = tree.xpath('//ul/text()')
  #print bulletpoints[0]
  #print bulletpoints[1]
  #print bulletpoints[2]
  #print bulletpoints[3]
   
  #Obtaining temp
- string1 = bulletpoints[2]
+ string1 = bulletpoints[0]
  tempstringarray = string1.split(' ')
- temperature = tempstringarray[4]
+ temperature = tempstringarray[4].strip()
+ print "temperature - " + temperature
 
  #Obtaining humidity
- string2 = bulletpoints[3]
+ string2 = bulletpoints[2]
  tempstringarray = string2.split(' ')
- humidity = tempstringarray[4]
+ humidity = tempstringarray[2].strip()
+ print "humidity - " + humidity
 
  now = time.strftime("%d-%m-%Y %H:%M:%S")
  unit1 = "DegC"
@@ -81,29 +57,31 @@ def WriteDataCSV():
 
 def WriteDataThingSpeak():
  #Acquire data from Arduino, first for temp and next for humidity
- page = requests.get('http://10.100.10.10')
+ page = requests.get('http://192.168.1.24')
  tree = html.fromstring(page.content)
- bulletpoints = tree.xpath('//li/text()')
+ bulletpoints = tree.xpath('//ul/text()')
  #print bulletpoints[0]
  #print bulletpoints[1]
  #print bulletpoints[2]
  #print bulletpoints[3]
 
  #Obtaining temp
- string1 = bulletpoints[2]
+ string1 = bulletpoints[0]
  tempstringarray = string1.split(' ')
- temperature = tempstringarray[4]
+ temperature = tempstringarray[4].strip()
+ print "temperature - " + temperature
 
  #Obtaining humidity
- string2 = bulletpoints[3]
+ string2 = bulletpoints[2]
  tempstringarray = string2.split(' ')
- humidity = tempstringarray[4]
+ humidity = tempstringarray[2].strip()
+ print "humidity - " + humidity
 
  #now = time.strftime("%d/%m/%Y %H:%M:%S")
  now = time.strftime("%d-%m-%Y %H:%M:%S")
  unit1 = "DegC"
  unit2 = "Percent"
- params = urllib.urlencode({'field1': temperature, 'field2': humidity, 'key':'xxxxxx'}) #Enter Key Here    
+ params = urllib.urlencode({'field1': temperature, 'field2': humidity, 'key':'xxxxxxx'}) #Enter Key Here    
  headers = {"Content-typZZe": "application/x-www-form-urlencoded","Accept": "text/plain"}
  conn = httplib.HTTPConnection("api.thingspeak.com:80")                
  try:
