@@ -1,0 +1,25 @@
+sitemap demo label="Home Automation @ 37 Ronald Av" {
+    Frame label="Home Automation @ 37 Ronald Av" {
+        Text label="Home Automation Dashboard"
+        Text item=TimeInMelbourne_Date label="The Time & Date is [ %1$tA, %1$td/%1$tm/%1$tY %1$tH:%1$tM ]" 
+    }
+    Frame label="Weather" {
+        Text item=WeatherInformation_ForecastToday_MaximumTemperature label="Temp Max (Today) [%.1f °C]"
+        Text item=WeatherInformation_ForecastToday_MinimumTemperature label="Temp Min (Today) [%.1f °C]"
+        Text item=WeatherInformation_ForecastToday_RainFallDay label="Rain Forecasted (Today) [%.1f]"
+        Text item=WeatherInformation_ForecastTomorrow_MaximumTemperature label="Temp Max (Tomorrow) [%.1f °C]"
+        Text item=WeatherInformation_ForecastTomorrow_MinimumTemperature label="Temp Min (Tomorrow) [%.1f °C]"
+        Text item=WeatherInformation_ForecastTomorrow_RainFallDay label="Rain Forecasted (Tomorrow) [%.1f]"
+    }
+    Frame label="Lights" {
+        Switch item=StairwayLight_Brightness icon="Light" label="Stairway Light"
+        Switch item=UpperPassageWayLight_Brightness icon="Light" label="Upstairs Passage Way Light"
+        Switch item=MasterBedroomLight icon="Light" label="Master Bedroom Light"
+        Switch item=MainKitchenSwitch icon="Light" label="Kitchen"
+        Switch item=KitchenAdjacentOpenAreaSwitch icon="Light" label="Kitchen Open Area"
+        Switch item=LivingRoom icon="Light" label="Living Room"
+        Switch item=PassageWaySwitch icon="Light" label="Downstairs Passage Way Light"
+        Switch item=MainDoorOutside icon="Light" label="Main Door / Entrance (Outside)"
+        Switch item=DiningRoom icon="Light" label="Dining Room"
+    }
+}
