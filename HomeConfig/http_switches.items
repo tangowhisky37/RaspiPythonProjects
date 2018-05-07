@@ -1,0 +1,10 @@
+Switch LivingRoomFloorLamps { http=">[ON:POST:http://192.168.1.24/socket1On:on] >[OFF:POST:http://192.168.1.24/socket1Off:off]" }
+Switch DesktopLamp { http=">[ON:POST:http://192.168.1.24/socket3On:on] >[OFF:POST:http://192.168.1.24/socket3Off:off]" }
+Switch BookShelfLamp { http=">[ON:POST:http://192.168.1.24/socket2On:on] >[OFF:POST:http://192.168.1.24/socket2Off:off]" }
+Switch LivingRoomNightLamp { http=">[ON:POST:http://192.168.1.24/socket4On:on] >[OFF:POST:http://192.168.1.24/socket4Off:off]" }
+Switch GuestBedroomLamp { http=">[ON:POST:https://maker.ifttt.com/trigger/TurnOnGuestBedroomLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:on] >[OFF:POST:https://maker.ifttt.com/trigger/TurnOffGuestBedroomLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:off]" }
+Switch JadynsRoomLamp { http=">[ON:POST:https://maker.ifttt.com/trigger/TurnOnJadynsRoomLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:on] >[OFF:POST:https://maker.ifttt.com/trigger/TurnOffJadynsRoomLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:off]" }
+Switch StudyDeskGlobe { http=">[ON:POST:https://maker.ifttt.com/trigger/StudyDeskGlobeOn/with/key/Dzj4Tcd9vO05FUsKZfYtN:on] >[OFF:POST:https://maker.ifttt.com/trigger/StudyDeskGlobeOff/with/key/Dzj4Tcd9vO05FUsKZfYtN:off]" }
+Switch MasterBedroomRHLamp { http=">[ON:POST:https://maker.ifttt.com/trigger/TurnOnMasterBedroomRHLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:on] >[OFF:POST:https://maker.ifttt.com/trigger/TurnOffMasterBedroomRHLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:off]" }
+Switch MasterBedroomLHLamp { http=">[ON:POST:https://maker.ifttt.com/trigger/TurnOnMasterBedroomLHLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:on] >[OFF:POST:https://maker.ifttt.com/trigger/TurnOffMasterBedroomLHLamp/with/key/Dzj4Tcd9vO05FUsKZfYtN:off]" }
+Switch StudyFan { http=">[ON:POST:https://maker.ifttt.com/trigger/StudyFanOn/with/key/Dzj4Tcd9vO05FUsKZfYtN:on] >[OFF:POST:https://maker.ifttt.com/trigger/StudyFanOff/with/key/Dzj4Tcd9vO05FUsKZfYtN:off]" }

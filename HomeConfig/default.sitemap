@@ -11,15 +11,27 @@ sitemap demo label="Home Automation @ 37 Ronald Av" {
         Text item=WeatherInformation_ForecastTomorrow_MinimumTemperature label="Temp Min (Tomorrow) [%.1f °C]"
         Text item=WeatherInformation_ForecastTomorrow_RainFallDay label="Rain Forecasted (Tomorrow) [%.1f]"
     }
-    Frame label="Lights" {
-        Switch item=StairwayLight_Brightness icon="Light" label="Stairway Light"
-        Switch item=UpperPassageWayLight_Brightness icon="Light" label="Upstairs Passage Way Light"
-        Switch item=MasterBedroomLight icon="Light" label="Master Bedroom Light"
+    Frame label="Ground Floor Lights" {
         Switch item=MainKitchenSwitch icon="Light" label="Kitchen"
         Switch item=KitchenAdjacentOpenAreaSwitch icon="Light" label="Kitchen Open Area"
         Switch item=LivingRoom icon="Light" label="Living Room"
         Switch item=PassageWaySwitch icon="Light" label="Downstairs Passage Way Light"
         Switch item=MainDoorOutside icon="Light" label="Main Door / Entrance (Outside)"
         Switch item=DiningRoom icon="Light" label="Dining Room"
+        Switch item=LivingRoomFloorLamps icon="Light" label="Living Room Floor Lamps"
+        Switch item=DesktopLamp icon="Light" label="Study Desk Lamp"
+        Switch item=BookShelfLamp icon="Light" label="Study Bookshelf Lamp"
+        Switch item=LivingRoomNightLamp icon="Light" label="Living Room Night Lamp"
+        Switch item=StudyDeskGlobe icon="Light" label="Study Desk Globe"
+        Switch item=StudyFan icon="Light" label="Study Fan"
+    }
+    Frame label="First Floor Lights" {
+        Switch item=StairwayLight_Brightness icon="Light" label="Stairway Light"
+        Switch item=UpperPassageWayLight_Brightness icon="Light" label="Upstairs Passage Way Light"
+        Switch item=MasterBedroomLight icon="Light" label="Master Bedroom Light"
+        Switch item=MasterBedroomRHLamp icon="Light" label="Master Bedroom RH Table Lamp"
+        Switch item=MasterBedroomLHLamp icon="Light" label="Master Bedroom LH Table Lamp"
+        Switch item=GuestBedroomLamp icon="Light" label="Guest Bedroom Table Lamp"
+        Switch item=JadynsRoomLamp icon="Light" label="Jadyns Room Table Lamp"
     }
 }
