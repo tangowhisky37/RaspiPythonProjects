@@ -1,0 +1,250 @@
+{
+  "TimeInMelbourne_Date": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "DateTime",
+      "tags": [],
+      "label": "Date \u0026 Time",
+      "category": "Date"
+    }
+  },
+  "WeatherInformation_ForecastTomorrow_MaximumTemperature": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Tomorrow\u0027s Forecast / Maximum Temperature",
+      "category": "Temperature"
+    }
+  },
+  "WeatherInformation_Humidity": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Today\u0027s Humidity @ Yahoo",
+      "category": "Humidity"
+    }
+  },
+  "WeatherInformation_ForecastTomorrow_MaximumWindSpeed": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Tomorrow\u0027s Forecast / Maximum Wind Speed",
+      "category": "Wind"
+    }
+  },
+  "WeatherInformation_ForecastToday_MaximumTemperature": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Forecast Max Temp Melbourne",
+      "category": "Temperature"
+    }
+  },
+  "StairwayLight_Brightness": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Dimmer",
+      "tags": [],
+      "label": "Brightness",
+      "category": "DimmableLight"
+    }
+  },
+  "WeatherInformation_ForecastTomorrow_ForecastConditions": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "String",
+      "tags": [],
+      "label": "Forecast Conditions"
+    }
+  },
+  "MainDoorOutside": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Main Door Outside",
+      "category": "Switch"
+    }
+  },
+  "WeatherInformation_Pressure": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Today\u0027s Pressure @ Yahoo",
+      "category": "Pressure"
+    }
+  },
+  "WeatherInformation_Current_WindGust": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Wind Gust",
+      "category": "Wind"
+    }
+  },
+  "UpperPassageWayLight_Brightness": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Dimmer",
+      "tags": [],
+      "label": "Upper Passage Way",
+      "category": "DimmableLight"
+    }
+  },
+  "WeatherInformation_Current_CurrentConditions": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "String",
+      "tags": [],
+      "label": "Current Weather / Melbourne"
+    }
+  },
+  "WeatherInformation_Current_WindSpeed": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Wind Speed",
+      "category": "Wind"
+    }
+  },
+  "LivingRoom": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Living Room",
+      "category": "Switch"
+    }
+  },
+  "WeatherInformation_ForecastToday_RainFallDay": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Forecast Rainfall Melbourne",
+      "category": "Rain"
+    }
+  },
+  "WeatherInformation_ForecastToday_MinimumTemperature": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Forecast Min Temp Melbourne",
+      "category": "Temperature"
+    }
+  },
+  "WeatherInformation_Temperature": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Today\u0027s Temperature @ Yahoo",
+      "category": "Temperature"
+    }
+  },
+  "DiningRoom": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Dining Room",
+      "category": "Switch"
+    }
+  },
+  "WeatherInformation_ForecastTomorrow_RainFallDay": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Tomorrow\u0027s Forecast / Rain Fall Day",
+      "category": "Rain"
+    }
+  },
+  "KitchenAdjacentOpenAreaSwitch": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Kitchen Area Extension",
+      "category": "Switch"
+    }
+  },
+  "WeatherInformation_Current_RainFallDay": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Rain Fall Today",
+      "category": "Rain"
+    }
+  },
+  "MasterBedroomLight": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Dimmer",
+      "tags": [],
+      "label": "Brightness",
+      "category": "DimmableLight"
+    }
+  },
+  "WeatherInformation_ForecastTomorrow_MinimumTemperature": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Tomorrow\u0027s Forecast / Minimum Temperature",
+      "category": "Temperature"
+    }
+  },
+  "PassageWaySwitch": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Passage Way (Adj Living Rm)",
+      "category": "Switch"
+    }
+  },
+  "MainKitchenSwitch": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Main Kitchen Area",
+      "category": "Switch"
+    }
+  }
+}
