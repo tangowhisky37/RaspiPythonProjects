@@ -1,0 +1,5 @@
+Switch KitchenDownlights "Kitchen Lights" [ "Lighting" ] {channel="zwave:device:6d8c4d92:node5:switch_binary1"}
+Switch ArenaDownlights "Arena Lights" [ "Lighting" ] {channel="zwave:device:6d8c4d92:node5:switch_binary2"}
+Switch DiningRoomDownlights "Dining Room Lights" [ "Lighting" ] {channel="zwave:device:6d8c4d92:node2:switch_binary1"}
+Switch LivingRoomDownlights "Living Room Lights" [ "Lighting" ] {channel="zwave:device:6d8c4d92:node3:switch_binary1"}
+Switch PassageWayDownlights "Passage Lights" [ "Lighting" ] {channel="zwave:device:6d8c4d92:node4:switch_binary1"}
